@@ -15,13 +15,33 @@ body {
     #after{
       content: "";
       display: block;
-      width: 1px;
+      width: 2px;
       height: 90px;
       background-color: rgb(168, 178, 209);
       margin: 0 auto;
         
     }
+
+    .b{
+      min-height: 80vh;
+    }
     
+    #imgBio{
+      float: left;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      
+    }
+
+    #bioWords{
+      width: 500px;
+      float: right;
+      text-align: left;
+      margin-top: 10vh;
+    }
+
     #side{
         width: 40px;
         position: fixed;
@@ -30,6 +50,13 @@ body {
         right: auto;
         z-index: 10;
         color: rgb(168, 178, 209);
+    }
+
+    .afterWords{
+      content: "";
+      display: block;
+      background-color: rgb(168, 178, 209);
+      opacity: .2;
     }
 
     li{
@@ -48,9 +75,29 @@ body {
       justify-content: center;
       -webkit-box-align: center;
       flex-direction: column;
-      min-height: 80vh;
+      min-height: 90vh;
     }
-    
+
+    #aboutMe{
+      color: #f8f8f8;
+      font-weight: 200;
+      position: relative;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      width: 100%;
+      white-space: nowrap;
+      font-size: 32px;
+    }
+    #bio{
+      color: #f8f8f8;
+      font-weight: 200;
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      align-items: flex-start;
+    }
     @import url('https://fonts.googleapis.com/css?family=Abel');
 
 
@@ -139,9 +186,7 @@ body {
   margin-bottom: 0;
 }
 
-.card.green .additional .more-info h1 {
-  color: #224C36;
-}
+
 
 .card .additional .coords {
   margin: 0 1rem;
@@ -149,9 +194,6 @@ body {
   font-size: 1rem;
 }
 
-.card.green .additional .coords {
-  color: #325C46;
-}
 
 .card .additional .coords span + span {
   float: right;
@@ -168,9 +210,6 @@ body {
   color: #fff;
 }
 
-.card.green .additional .stats {
-  color: #325C46;
-}
 
 .card .additional .stats > div {
   flex: 1;
@@ -240,6 +279,21 @@ button:hover{
 
     #otherside{
       display: none;
+    }
+
+    #imgBio{
+      float: none;
+      width: auto;
+    }
+
+    #bioWords{
+      width: auto;
+      float: none;
+      margin-top: 5vh;
+    }
+
+    .b{
+      min-height: 50vh;
     }
 
   }
