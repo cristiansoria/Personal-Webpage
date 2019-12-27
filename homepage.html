@@ -2,22 +2,23 @@
 <html>
    <head>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link rel="stylesheet" href="homepage.css">
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="homepage.css">
+
    </head>
    <body>
-      <nav class="navbar navbar-expand-lg" style="font-family: 'Courier New', Courier, monospace;">
-         <a class="navbar-brand" href="#" ><img src="Icons/pLogo.svg" alt="Instagram" style="height: 100px;"></a>
+      <nav class="navbar navbar-expand-lg" style="font-family: 'Courier New', Courier, monospace; position: fixed;">
+         <a class="navbar-brand" href="#" ><img src="Icons/pLogo.svg" alt="Instagram" style="height: 120px;"></a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"><img src="Icons/drop.svg" alt=""></span>
+         <span class="navbar-toggler-icon"><img src="Icons/drop.svg" alt="" style="width: 50px;float: right;"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                <li class="nav-item active">
-                  <a class="nav-link" href="#imgBio">About</a>
+                  <a class="nav-link" href="#bilo">About</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#pro" >Projects</a>
+                  <a class="nav-link" href="#" >Projects</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="#" >Experience</a>
@@ -55,9 +56,9 @@
               Sacramento State Computer Science Junior</h1>
               <h3 style="font-size: 10px; margin-top: 25px; text-align: center; letter-spacing: 2px; opacity: .50;">
               The Programmer You've Been Looking For <br><button type="button" class="btn button" style="margin-top: 40px;border: 2px solid rgb(100, 255, 218);"><a class="nav-link" href="mailto: cristiansoria@csus.edu" style="color: rgb(100, 255, 218);">Email Me!</a></button></h1>
-           </div>
+            </div>
 
-           <div class="b" id = "bilo">
+           <div class="b" id="bilo">
               <img id = "imgBio" src="12.jpg" alt="idk" style="width: 50%;">
               <div id="bioWords">
                  <h1 class = "afterWords" id="aboutMe afterWords">About Me</h1>
@@ -85,7 +86,9 @@
                  </ul>
               </div>
            </div>
-           <div id = "pro" style="margin-top: 10vh">
+
+           <div style="margin-top: 10vh; ">
+            <h1 class = "afterWords" id="aboutMe afterWords">Projects</h1>
               <div class="card">
                  <div class="additional">
                     <div class="user-card">
@@ -98,16 +101,6 @@
                           <a href="stock_Reader.zip" download style="font-size: 10px;"><img src="Icons/repo.svg" alt="Git" height="50px" style="margin: 10%"></a>
                        </div>
                     </div>
-                    <div class="more-info">
-                       <h1>Sample Output</h1>
-                       <div class="coords">
-                          <span><a href="ss.png"><img src="ss.png" alt="" style="width: 30%;"></a></span>
-                          <span>December 12th, 2019</span>
-                       </div>
-                       <div class="coords">
-                          <span>Written on:</span>
-                       </div>
-                    </div>
                  </div>
                  <div class="general">
                     <h1>Trading Algorithm</h1>
@@ -116,6 +109,7 @@
                     </p>
                  </div>
               </div>
+              <img id="ss" src="ss.png" alt="">
               <div class="card" style="float: right;">
                  <div class="additional">
                     <div class="user-card">
@@ -126,16 +120,6 @@
                           <a href="https://github.com/cristiansoria/AlgoTrading_Bot" style="font-size: 10px;"><img src="Icons/github.svg" alt="Git" height="50px" style="margin: 10%"></a>
                           <br>
                           <a href="stock_Reader.zip" download style="font-size: 10px;"><img src="Icons/repo.svg" alt="Git" height="50px" style="margin: 10%"></a>
-                       </div>
-                    </div>
-                    <div class="more-info">
-                       <h1>Sample Output</h1>
-                       <div class="coords">
-                          <span><a href="ss.png"><img src="ss.png" alt="" style="width: 200px;"></a></span>
-                          <span>December 12th, 2019</span>
-                       </div>
-                       <div class="coords">
-                          <span>Written on:</span>
                        </div>
                     </div>
                  </div>
