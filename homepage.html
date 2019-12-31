@@ -5,7 +5,9 @@
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="homepage.css">
    </head>
-   <body>
+   <body class="back-row-toggle splat-toggle">
+         <div class="rain front-row"></div>
+         <div class="rain back-row"></div>  
       <nav class="navbar navbar-expand-lg" style="font-family: 'Courier New', Courier, monospace; position: fixed;">
          <a class="navbar-brand" href="#" ><img src="Icons/pLogo.svg" alt="Instagram" style="height: 120px;"></a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -151,3 +153,38 @@
       </div>
    </body>
 </html>
+
+<script>
+   var makeItRain = function() {
+   //clear out everything
+   $('.rain').empty();
+
+   var increment = 0;
+   var drops = "";
+   var backDrops = "";
+
+   while (increment < 100) {
+      //couple random numbers to use for various randomizations
+      //random number between 98 and 1
+      var randoHundo = (Math.floor(Math.random() * (98 - 1 + 1) + 1));
+      //random number between 5 and 2
+      var randoFiver = (Math.floor(Math.random() * (5 - 2 + 1) + 2));
+      //increment
+      increment += randoFiver;
+      //add in a new raindrop with various randomizations to certain CSS properties
+      drops += '<div class="drop" style="left: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
+      backDrops += '<div class="drop" style="right: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
+   }
+
+   $('.rain.front-row').append(drops);
+   $('.rain.back-row').append(backDrops);
+   }
+
+   $('.splat-toggle.toggle').on('click', function() {
+   $('body').toggleClass('splat-toggle');
+   $('.splat-toggle.toggle').toggleClass('active');
+   makeItRain();
+   });
+
+   makeItRain();
+</script>
