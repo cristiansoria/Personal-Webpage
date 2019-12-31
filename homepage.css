@@ -305,6 +305,10 @@ button:hover{
       margin-top: 5vh;
     }
 
+    .cc{
+      max-width: min-content;
+    }
+
     .b{
       min-height: 50vh;
     }
