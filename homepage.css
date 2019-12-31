@@ -34,13 +34,11 @@ body {
       width: 50%;
       
     }
-
     #ss{
       float: left;
       display: block;
-      margin-left: auto;
-      margin-right: 0px;
-      width: 50%;
+      margin: 1.5em;
+      width: 450px;
     }
 
     #bioWords{
@@ -83,7 +81,7 @@ body {
       justify-content: center;
       -webkit-box-align: center;
       flex-direction: column;
-      min-height: 90vh;
+      min-height: 100vh;
     }
 
     #aboutMe{
@@ -283,7 +281,7 @@ button:hover{
 
 }
     
-  @media screen and (min-width: 300px) and (max-width: 1024px){
+  @media screen and (min-width: 0px) and (max-width: 1200px){
     #side{
       display: none;
     }
